@@ -36,7 +36,6 @@ app.delete('/books/delete/:id',function (req,res) {
     })
 });
 app.put('/books/update/:id',function (req,res) {
-
     con.query(statement.UpdateBook+req.params.id,req.body,function (err) {
         if (err) throw  err;
         res.send('Update Success !');
